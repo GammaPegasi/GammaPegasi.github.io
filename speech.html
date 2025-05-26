@@ -1,36 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text-to-Speech Demo</title>
+    <title>Texto a Voz (Uruguay)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+        }
+        textarea {
+            width: 90%;
+            height: 100px;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .speak-btn {
+            background-color: #008CBA;
+        }
+        .speak-btn:hover {
+            background-color: #005f6b;
+        }
+        .stop-btn {
+            background-color: #f44336;
+        }
+        .stop-btn:hover {
+            background-color: #a82d24;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Text-to-Speech Example</h1>
-    <textarea id="textInput" rows="8" cols="50">
+    <h1>Texto a Voz (Uruguay)</h1>
+    <textarea id="textInput">
         Hyundai Creta 1.6 GL AT 2024
         Maldonado, Punta del Este, USD 29990.
 
         Toyota Corolla Cross 1.8 Hybrid XEI CVT 2024
         Montevideo, 38500 dolar
-
-
-</textarea>
+    </textarea>
     <br>
-    <button onclick="speakText()">Speak</button>
+    <button class="speak-btn" onclick="speakText()">Escuchar</button>
+    <button class="stop-btn" onclick="stopText()">Detener</button>
 
     <script>
-        function speakText() {
-            const synth = window.speechSynthesis;
-            const textInput = document.getElementById("textInput").value;
-            const utterance = new SpeechSynthesisUtterance(textInput);
+        const synth = window.speechSynthesis;
+        let utterance;
 
-            utterance.lang = "es-UY"; // Set language
-            utterance.pitch = 1.2; // Adjust pitch (1 is default)
-            utterance.rate = 1; // Adjust speech rate (1 is default)
+        function speakText() {
+            const textInput = document.getElementById("textInput").value;
+            utterance = new SpeechSynthesisUtterance(textInput);
+
+            utterance.lang = "es-UY"; // Español (Uruguay)
+            utterance.pitch = 1.2; // Ajustar tono (1 es predeterminado)
+            utterance.rate = 1; // Ajustar velocidad (1 es predeterminado)
 
             synth.speak(utterance);
+        }
+
+        function stopText() {
+            synth.cancel(); // Detiene la síntesis de voz
         }
     </script>
 
