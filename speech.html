@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Demo</title>
+</head>
+<body>
+
+    <h1>Text-to-Speech Example</h1>
+    <textarea id="textInput" rows="4" cols="50">
+        Hyundai Creta 1.6 GL AT 2024
+        Maldonado, Punta del Este, USD 29990.
+
+        Toyota Corolla Cross 1.8 Hybrid XEI CVT 2024
+        Montevideo, 38500 dolar
+
+
+</textarea>
+    <br>
+    <button onclick="speakText()">Speak</button>
+
+    <script>
+        function speakText() {
+            const synth = window.speechSynthesis;
+            const textInput = document.getElementById("textInput").value;
+            const utterance = new SpeechSynthesisUtterance(textInput);
+
+            utterance.lang = "es-UY"; // Set language
+            utterance.pitch = 1.2; // Adjust pitch (1 is default)
+            utterance.rate = 1; // Adjust speech rate (1 is default)
+
+            synth.speak(utterance);
+        }
+    </script>
+
+</body>
+</html>
