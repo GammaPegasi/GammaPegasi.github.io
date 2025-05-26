@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cars</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Tailwind gray-100 */
+            color: #374151; /* Tailwind gray-700 */
+        }
+        .ad-card {
+            background-color: #ffffff; /* Tailwind white */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .ad-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+        }
+        .btn-primary {
+            background-color: #dc2626; /* Tailwind red-600 */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #b91c1c; /* Tailwind red-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-700">
+
+    <header class="py-8 bg-red-600 text-white shadow-md">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">¡Grandes Ofertas en Vehículos Nuevos y Usados!</h1>
+            <p class="text-lg">Encuentra el coche perfecto para ti en Uruguay.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Nuestras Mejores Ofertas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Subaru WRX 2.4i Performance Awt Mt</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2025</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Canelones, Ciudad de la Costa</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 84.800</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Toyota Corolla Cross 1.8 Hybrid XEI CVT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2024</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Montevideo</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 38.500</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Hyundai Creta 1.6 GL AT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2024</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Maldonado, Punta del Este</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 29.990</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Volkswagen Nivus 1.0 TSI Highline AT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2025</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Colonia del Sacramento</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 34.500</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Ford Ranger XLT 3.2L Diesel AT 4x4</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2024</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Salto</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 58.000</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Chevrolet Onix Plus 1.0 Turbo LTZ AT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2025</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Paysandú</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 23.700</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Nissan Kicks 1.6 Exclusive CVT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2024</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Rocha, La Paloma</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 31.500</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">BMW 320i SportLine Sedan</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2023</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Montevideo</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 62.000</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Mercedes-Benz C 200 Avantgarde Sedan</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2024</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Canelones, Solymar</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 71.000</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+                <div class="ad-card p-6">
+                    <h3 class="text-xl font-semibold text-red-600 mb-2">Suzuki Swift 1.2 GL MT</h3>
+                    <p class="text-gray-600 mb-1">Año: <span class="font-medium">2025</span></p>
+                    <p class="text-gray-600 mb-1">Ubicación: <span class="font-medium">Montevideo</span></p>
+                    <p class="text-2xl font-bold text-green-500 mt-2 mb-4">USD 19.990</p>
+                    <button class="btn-primary w-full">Ver Detalles</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center py-16 bg-red-700 text-white rounded-lg shadow-xl">
+            <h2 class="text-3xl font-bold mb-6">¿Encontraste tu Próximo Coche?</h2>
+            <p class="text-lg mb-8">¡No esperes más! Visítanos hoy y haz tu sueño realidad.</p>
+            <button class="bg-white text-red-700 font-bold py-3 px-6 rounded-full hover:bg-red-100 transition duration-200 ease-in-out">¡Visítanos Ahora!</button>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-gray-800 text-gray-400 text-center text-sm mt-12">
+        <p>&copy; <span id="currentYear"></span> Tu Concesionario de Confianza en Uruguay.</p>
+        <p class="mt-2">Precios y disponibilidad sujetos a cambios sin previo aviso.</p>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
