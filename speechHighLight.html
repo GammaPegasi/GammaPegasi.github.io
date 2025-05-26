@@ -11,7 +11,7 @@
             margin: 20px;
             padding: 10px;
         }
-        #textDisplay {
+        #textInput {
             font-size: 20px;
             width: 90%;
             margin: 10px auto;
@@ -49,13 +49,21 @@
 <body>
 
     <h1>Texto a Voz (Uruguay)</h1>
+    
     <div id="textInput">
+        Hola, estos son los vehiculos en Montevideo.
+        
         Hyundai Creta 1.6 GL AT 2024
         Maldonado, Punta del Este, USD 29990.
 
         Toyota Corolla Cross 1.8 Hybrid XEI CVT 2024
         Montevideo, 38500 dolar
+
     </div>
+    
+
+
+
     <br>
     <button class="speak-btn" onclick="speakText()">Escuchar</button>
     <button class="stop-btn" onclick="stopText()">Detener</button>
@@ -66,10 +74,10 @@
         let words = [];
 
         function speakText() {
-            const textDisplay = document.getElementById("textDisplay");
-            const text = textDisplay.innerText;
+            const textInput = document.getElementById("textInput");
+            const text = textInput.innerText;
             words = text.split(" ");
-            textDisplay.innerHTML = words.map(word => `<span>${word}</span>`).join(" ");
+            textInput.innerHTML = words.map(word => `<span>${word}</span>`).join(" ");
 
             utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = "es-UY"; // Español (Uruguay)
@@ -78,7 +86,7 @@
 
             let wordIndex = 0;
             utterance.onboundary = function(event) {
-                const spans = document.querySelectorAll("#textDisplay span");
+                const spans = document.querySelectorAll("#textInput span");
                 spans.forEach(span => span.classList.remove("highlight"));
                 if (wordIndex < spans.length) {
                     spans[wordIndex].classList.add("highlight");
